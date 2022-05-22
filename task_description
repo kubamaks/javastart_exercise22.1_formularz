@@ -1,0 +1,19 @@
+Treść zadania
+
+Stwórz stronę internetową. Powinna posiadać co najmniej 2 podstrony:
+Strona główna
+Na tej stronie powinien znaleźć się krótki opis czym zajmuje się (wymyślona) firma / aplikacja.
+
+Strona kontaktowa
+Na tej stronie powinien znaleźć się formularz kontaktowy do wysłania maila. Formularz powinien posiadać 3 pola:
+
+    nazwa wysyłającego
+    email wysyłającego
+    treść wiadomości 
+
+Po naciśnięciu "wyślij" powinien zostać wysłany email z wiadomością do właściciela strony. Jako "odpowiedz do" powinien zostać ustawiony adres wpisany przez wysyłającego.
+
+Opcjonalnie osoba wysyłająca zapytanie przez formularz kontaktowy powinna również otrzymać potwierdzenie wysłania zapytania wraz z informacją, że niebawem ktoś odpowie.
+Pozostałe wymagania
+
+Każda ze stron powinna używać tego samego szablonu (ten sam nagłówek i stopka). Nagłówek i stopka być zdefiniowane w jednym miejscu. Gdyby doszło do konieczności zmiany np linka w nagłówku, to zmiany należałoby dokonać tylko w jednym miejscu.
