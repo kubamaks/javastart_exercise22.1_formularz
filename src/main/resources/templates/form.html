@@ -8,8 +8,9 @@
 
 <div layout:fragment="content">
     <h3>Kontakt z nami:</h3>
-    <p>Hesperid's gardens<br/>ul. Zielony zakątek 1<br/> 00-000 Zielonka<br/>tel: 999 999 999<br/>email: hesp_garden@hello.java</p>
-    <div><p>Poniżej wnajduje się formularz kontaktowy. Napisz do nas:</p></div>
+    <p>Hesperid's gardens<br/>ul. Zielony zakątek 1<br/> 00-000 Zielonka<br/>tel: 999 999 999<br/>email:
+        hesp_garden@hello.java</p>
+    <div><p>Poniżej znajduje się formularz kontaktowy. Napisz do nas:</p></div>
 
     <form th:action="@{/wyslij}" method="post" th:object="${mail}">
         <label for="senderName" class="form-label fw-lighter">nazwa</label>

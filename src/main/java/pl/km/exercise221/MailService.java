@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 @Service
 class MailService {
     static final String CONTACT_EMAIL_ADDRESS = "kubamaktesting@gmail.com";
-    private JavaMailSender javaMailSender;
-    private MailRepository mailRepository;
+    private final JavaMailSender javaMailSender;
+    private final MailRepository mailRepository;
 
     public MailService(MailRepository mailRepository, JavaMailSender javaMailSender) {
         this.javaMailSender = javaMailSender;
@@ -24,7 +24,7 @@ class MailService {
         mailMessage.setFrom(mail.getReceiverMail());
         mailMessage.setTo(CONTACT_EMAIL_ADDRESS);
         mailMessage.setSubject("zapytanie od: " + mail.getSenderName());
-        mailMessage.setText(mail.getMessage());
+        mailMessage.setText(mail.getMessage() + "email:" + mail.getReceiverMail());
         javaMailSender.send(mailMessage);
     }
 }
