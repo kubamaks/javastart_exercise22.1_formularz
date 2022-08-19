@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Formularz kontaktowy</title>
+</head>
+
+<div layout:fragment="content">
+    <h3>Kontakt z nami:</h3>
+    <p>Hesperid's gardens<br/>ul. Zielony zakątek 1<br/> 00-000 Zielonka<br/>tel: 999 999 999<br/>email:
+        hesp_garden@hello.java</p>
+    <div><p>Poniżej znajduje się formularz kontaktowy. Napisz do nas:</p></div>
+
+    <form th:action="@{/wyslij}" method="post" th:object="${mail}">
+        <label for="senderName" class="form-label fw-lighter">nazwa</label>
+        <input id="senderName" type="text" th:field="*{senderName}" class="form-control text-center"
+               placeholder="Imię, Nazwisko / nazwa firmy / nick">
+        <label for="senderEmail" class="form-label fw-lighter">adress email</label>
+        <input id="senderEmail" type="email" th:field="*{senderEmail}" class="form-control text-center"
+               placeholder="Twój email">
+        <label for="message" class="form-label fw-lighter">wiadomość</label>
+
+        <textarea id="message" th:field="*{message}" class="form-control text-center"
+                  placeholder="tutaj wpisz wiadomość"></textarea>
+        <button class="form-button" type="submit" th:type="submit">Wyślij!</button>
+    </form>
+
+</div>
+</html>
